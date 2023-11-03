@@ -23,7 +23,7 @@ def join_oc(multi_session):
     url = "https://infamousgangsters.com/site.php?page=oc"
     referrer = "https://infamousgangsters.com/site.php?page=igforum&forum=1"
 
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
     response_list = multi_session.get(url, headers=headers)
 
 
@@ -44,7 +44,7 @@ def join_oc(multi_session):
     post_data = f"ocid={oc_value}&Submit=Accept"
     post_url = "https://infamousgangsters.com/site.php?page=oc"
     
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
 
     post_response = multi_session.post(post_url, headers=headers, data=post_data)
 
