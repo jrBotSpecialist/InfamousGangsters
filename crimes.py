@@ -46,7 +46,7 @@ def fetch_crimes(multi_session):
     
     try:
         # Make the POST request with the session and data
-        multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+        multi_session = MultiSession("session_cookie.json")
 
         post_response_list = multi_session.post(post_request_url, data=post_data, headers=headers)
         
