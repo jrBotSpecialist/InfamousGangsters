@@ -29,7 +29,7 @@ def make_request(multi_session):
         "Sec-Fetch-User": "?1",
         "referrer": "https://infamousgangsters.com/site.php?page=users_online"
     }
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
     response_list = multi_session.get(url, headers=headers)
 
     for response in response_list:
@@ -49,7 +49,7 @@ def save_captcha_image(multi_session, image_file_path):
         "Sec-Fetch-Site": "same-origin",
         "referrer": "https://infamousgangsters.com/site.php?page=bulletfactory"
     }
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
     response_list = multi_session.get(url, headers=headers)
 
     for response in response_list:
@@ -96,7 +96,7 @@ def make_bullet_factory_request(multi_session, ocr_result):
 
     # Replace 'DXZE8' with the actual OCR result
     body = f"buybullets=55&bulletcode={ocr_result}&give=Buy%21"
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
     response_list = multi_session.post(url, headers=headers, data=body)
 
     for response in response_list:
