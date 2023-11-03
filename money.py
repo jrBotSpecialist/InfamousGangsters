@@ -11,7 +11,7 @@ def sellpointsvalue(multi_session):
     }
 
     referrer = "https://infamousgangsters.com/site.php?page=bulletfactory"
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
 
     response_list = multi_session.get(url, headers=headers)
     
@@ -42,7 +42,7 @@ def buypointsvalue(multi_session):
     referrer = "https://infamousgangsters.com/site.php?page=bulletfactory"
     
     
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
     response_list = multi_session.get(url, headers=headers)
     
     for response in response_list:
@@ -87,7 +87,7 @@ def sellpoints(multi_session, smoney_value):
         "submit": "Put offer!"
     }
     
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
 
     response_list = multi_session.post(url, headers=headers, data=post_data)
     
@@ -123,7 +123,7 @@ def buypoints(multi_session, bmoney_value):
         "submit": "Put offer!"
     }
 
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
 
     response_list = multi_session.post(url, headers=headers, data=post_data)
     
