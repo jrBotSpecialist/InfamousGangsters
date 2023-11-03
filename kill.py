@@ -18,7 +18,7 @@ def euo(multi_session):
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0",
   }
 
-  multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+  multi_session = MultiSession("session_cookie.json")
 
   response_tuple = multi_session.get(url, headers=headers_get)
 
@@ -56,7 +56,7 @@ def save_captcha_image(multi_session, image_file_path):
         "Sec-Fetch-Site": "same-origin",
         "referrer": "https://infamousgangsters.com/site.php?page=kill"
     }
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
     response_list = multi_session.get(url, headers=headers)
 
     for response in response_list:
@@ -116,7 +116,7 @@ def sfm(multi_session, usernames):
             "submit": "Search!"
         }
 
-        multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+        multi_session = MultiSession("session_cookie.json")
 
         response_tuple = multi_session.post(url, headers=headers_get, data=payload)
 
@@ -139,7 +139,7 @@ def sfmc(multi_session, usernames, counter):
   search_counter = counter
   
   for username in usernames[search_counter:]:
-    save_captcha_image(multi_session, "C:\\Users\\Student\\Desktop\\InfamousGangsters\\python-ig\\kill.png")
+    save_captcha_image(multi_session, "kill.png")
 
     url = "https://infamousgangsters.com/site.php?page=kill"
     
@@ -169,7 +169,7 @@ def sfmc(multi_session, usernames, counter):
     "submit": "Search!"
     }
     
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
 
     response_tuple = multi_session.post(url, headers=headers_get, data=payload)
     search_counter += 1
