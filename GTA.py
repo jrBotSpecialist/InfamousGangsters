@@ -33,7 +33,7 @@ def gta_post_request(multi_session):
     }
     
     try:
-        multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+        multi_session = MultiSession("session_cookie.json")
 
         # Make the GTA POST request with the session and data
         gta_response_list = multi_session.post(gta_url, data=gta_data, headers=headers)
