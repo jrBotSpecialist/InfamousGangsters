@@ -26,7 +26,7 @@ def get_post_secret(multi_session):
             'Sec-Fetch-User': '?1',
             'Referer': 'https://infamousgangsters.com/site.php?page/postsecret'  # Set the referrer in the headers
         }
-        multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+        multi_session = MultiSession("session_cookie.json")
     
         post_secret_response_list = multi_session.get('https://infamousgangsters.com/site.php?page=bullets', headers=headers)
         for response in post_secret_response_list:
@@ -64,7 +64,7 @@ def fetch_melt(multi_session):
 
         if post_secret_value:
             print(YELLOW + f'Using post_secret value: {post_secret_value}' + ENDC)
-            multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+            multi_session = MultiSession("session_cookie.json")
 
             bullets_response_list = multi_session.get('https://infamousgangsters.com/site.php?page=bullets', headers=headers)
             for bullets_response in bullets_response_list:
