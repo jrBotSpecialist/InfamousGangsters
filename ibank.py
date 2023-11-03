@@ -19,7 +19,7 @@ def ibank(multi_session):
         "deposit": "Do it",
         "bankmoneywit": "",
     }
-    multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+    multi_session = MultiSession("session_cookie.json")
     # Send the POST request
     response_list = multi_session.post(url, data=data, headers=headers)
     
