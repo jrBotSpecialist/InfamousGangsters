@@ -28,7 +28,7 @@ BLUE = "\033[94m"
 ENDC = "\033[0m"
 
 # Your session cookies
-session_cookie_file = "C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json"
+session_cookie_file = "session_cookie.json"
 
 # Create an instance of MultiSession and load the sessions from the JSON file
 multi_session = MultiSession(session_cookie_file)
@@ -40,7 +40,7 @@ if multi_session:
 # Variable to store the OCR result
 ocr_result = None
 
-multi_session = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+multi_session = MultiSession("session_cookie.json")
 
 def bank():
     ibank.ibank(multi_session)
@@ -120,11 +120,11 @@ def qt():
 def run_bullet_factory():
     try:
        # Create instances of MultiSession for session 1 and session 2
-       multi_session_1 = MultiSession("C:\\Users\\Student\\Desktop\\python-ig\\session_cookie.json")
+       multi_session_1 = MultiSession("session_cookie.json")
 
        # Use the appropriate multi_session instance for each task
        bulletfactory.make_request(multi_session_1)
-       bulletfactory.save_captcha_image(multi_session_1, "C:\\Users\\Student\\Desktop\\InfamousGangsters\\python-ig\\captcha.png")
+       bulletfactory.save_captcha_image(multi_session_1, "captcha.png")
        bulletfactory.check_bullet_factory_and_buy_bullets(multi_session_1)
     except Exception as error:
         print(f"An error occurred in the Bullet Factory function: {error}")
